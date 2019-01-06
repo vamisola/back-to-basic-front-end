@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 Best Practices</title>
+    <link rel="stylesheet" href="css/best-practices.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>8 Front-end Best Practices</header>
+        <ul>
+            <a class="nav-link" href="#Introduction" rel="internal">
+                <li>Introduction</li>
+            </a>
+            <a class="nav-link" href="#Choose_the_right_browser">
+                <li>Choose the right browser</li>
+            </a>
+            <a class="nav-link" href="#Load_images">
+                <li>Load images in appropriate sizes</li>
+            </a>
+            <a class="nav-link" href="#Load_css_js">
+                <li>Load CSS and JS in the right order</li>
+            </a>
+            <a class="nav-link" href="#Reduce_requests">
+                <li>Reduce requests to a minimum</li>
+            </a>
+            <a class="nav-link" href="#Careful_redirections">
+                <li>Careful with linking and redirections</li>
+            </a>
+            <a class="nav-link" href="#Use_cookies">
+                <li>Use cookies responsibly</li>
+            </a>
+            <a class="nav-link" href="#Consider_server_side">
+                <li>Consider server-side improvements</li>
+            </a>
+            <a class="nav-link" href="#Performace_tests">
+                <li>Pay attention to performance tests</li>
+            </a>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>It is obvious that web applications are growing in popularity. What can be done so everyone can fully enjoy their
+    benefits without any damage to website performance and accessibility? It is actually a matter of just a few
+    improvements.</p>
+                <p>In web apps, data is exchanged via API and its presentation and editing is done browser-side. User experience is
+    smoother due to lack of pages overloading and better interaction with particular elements, e.g. via animated
+    redirections and clicks.</p>
+                <p>Greater benefits unfortunately come with greater hardware and software requirements, however. How can front-end
+    performance be improved? Here’s 8 best practices we adhere to at Unity Group:</p>
+            </article>
+        </section>
+        <section id="Choose_the_right_browser">
+            <header>Choose the right browser</header>
+            <article>
+                <p>If you would like to use new web technologies, you should first decide which browsers you want to support. According
+    to GS Statscounter findings on the most frequently used browsers, Internet Explorer is steadily losing popularity,
+    especially versions older than 11. Until recently, older versions of IE were much more popular among users, which
+    prevented the implementation of new solutions, or, at the very least, required using additional (dedicated) styles
+    and scripts which had a detrimental effect on performance.</p>
+                <p>Currently, the most popular browsers are Google Chrome and Mozilla Firefox, both of which come with automatic
+    updates. New browsers support new standards, enabling them to function faster and more efficiently.</p>
+            </article>
+        </section>
+        <section id="Load_images">
+            <header>Load images in appropriate sizes</header>
+            <article>
+                <p>Pictures used in dedicated applications have the same resolution in which they will be displayed in HTML, which is
+    not really problematic. Problems arise when we take the RWD approach to web design. In such cases, it is necessary
+    to have a few different resolutions handy, depending on the site’s breakpoints, and automatically load only the
+    image that fits best to the current size of the browser window.</p>
+            </article>
+        </section>
+        <section id="Load_css_js">
+            <header>Load CSS and JS in the right order</header>
+            <article>
+                <p>Delays in loading CSS slow down rendering, which makes for a terrible user experience. To avoid that, CSS files should be loaded first, therefore it is best to add them in the website’s header (<head/>). It is a good idea to place CSS files in the same domain as the website, which removes the waiting times involved with DNS searching. JavaScript files, on the other hand, should be moved to the very end of the page and placed just before the <body/> tag. Scripts are not loaded asynchronously, if they are placed at the end, the user will think that the page loaded faster.</p>
+            </article>
+        </section>
+        <section id="Reduce_requests">
+            <header>Reduce requests to a minimum</header>
+            <article>
+                <p>It is common practice to use many JS plug-ins, as well as several style files. In order to reduce the amount of
+    request sent to the server, a good solution is to combine such files. To that end, you can use ready-made tools
+    such as Grunt, Gulp or WebPack, which can help you quickly process combined files by e.g. minimising them.
+    Therefore, you only need one tool to simultaneously reduce the number of requests and the size of CSS and JS files.
+    If the site also contains many icons, it is also a good idea to prepare their font, svg or at least CSS sprite
+    versions, which can also be achieved using the above-mentioned tools.</p>
+            </article>
+        </section>
+        <section id="Careful_redirections">
+            <header>Careful with linking and redirections</header>
+            <article>
+                <p>Correct linking to resources is another important element which influences site load times. When attaching a file,
+    ensure that the file is free of errors and that opening it does not redirect you to another domain. Such
+    redirections extend file load times, which in turn makes the entire site slower. The same applies to linking to
+    files which do not exist. The browser requests the file and waits for a response whenever the site is opened, even
+    if the resource in question was not saved.</p>
+            </article>
+        </section>
+        <section id="Use_cookies">
+            <header>Use cookies responsibly</header>
+            <article>
+                <p>If you want to store information, remember that it is a good idea to reduce the amount and size of cookies as much
+    as possible, as they are sent to the server inside headers. For browser-side data storage, it is a good idea to use
+    Local Storage, in which you can store much more information than in cookie files.</p>
+            </article>
+        </section>
+        <section id="Consider_server_side">
+            <header>Consider server-side improvements</header>
+            <article>
+                <p>To speed up the load times and save on data transfer, the first thing that should be done is to turn on lossless
+    GZIP compression on your server. You can also move your static files to CDN, which will reduce the load on the main
+    server and prevent unnecessary cookies from being sent in headers, which will also have a positive effect on the
+    load times. Implementing HTTP/2 is also something that is worth considering.</p>
+            </article>
+        </section>
+        <section id="Performace_tests">
+            <header>Pay attention to performance tests</header>
+            <article>
+                <p>There are numerous online tools which can help you to improve performance, provide a summary of information about
+    the website’s elements or display statistics. The most popular tools of this kind include Page Speed, Y-Slow and
+    Web Page Test. In addition to external online applications, you can also make use of Chrome’s DevTools. The tools
+    allow for much quicker and easier website performance testing.</p>
+                <p>Web application performance is key – it is website speed and loading times that make users want to continue
+    browsing. Thanks to new web technologies, available tools and compatibility with new browsers, we are able to build
+    simple, functional and, most importantly, fast websites which can be run on many devices.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

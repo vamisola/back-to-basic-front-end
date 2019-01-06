@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Populate</title>
+    <link rel="stylesheet" type="text/css" href="./css/select-populate.css">
+</head>
+<body>
+    <section>
+        <p>
+            <input type="button" onclick=populateSelect() value="Click to Populate with JSON"/>
+        </p>
+    </section>
+    <section>
+        <select id="sel" onchange="show(this)">
+            <option value="">-- Select --</option>
+        </select>
+        <p id="msg"></p>
+    </section>
+<script type="text/javascript" src="./js/select-populate.js"></script>
+</body>
+</html>

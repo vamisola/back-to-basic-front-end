@@ -1,0 +1,402 @@
+<style>
+    div {
+        height: 40px;
+        width: 70%;
+        background: black;
+        margin: 50px auto;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    #rect {
+        animation-name: rainbow;
+        animation-duration: 4s;
+    }
+
+    @keyframes rainbow {
+        0% {
+            background-color: blue;
+            left: 0px;
+
+        }
+
+        50% {
+            background-color: green;
+            left: 25px;
+
+        }
+
+        100% {
+            background-color: yellow;
+            left: -25px;
+
+        }
+    }
+</style>
+
+<div id="rect"></div>
+
+
+
+<!-- Bouncing ball -->
+
+<style>
+    #ball {
+        width: 100px;
+        height: 100px;
+        margin: 50px auto;
+        position: relative;
+        border-radius: 50%;
+        background: linear-gradient(35deg,
+            #ccffff,
+            #ffcccc);
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+
+        50% {
+            top: 249px;
+            width: 130px;
+            height: 70px;
+        }
+
+        100% {
+            top: 0px;
+        }
+    }
+</style>
+<div id="ball"></div>
+
+
+
+<!-- Pumping heart -->
+
+<style>
+    .back {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        animation-name: backdiv;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    .heart {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: pink;
+        height: 50px;
+        width: 50px;
+        transform: rotate(-45deg);
+        animation-name: beat;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    .heart:after {
+        background-color: pink;
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 25px;
+    }
+
+    .heart:before {
+        background-color: pink;
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 0px;
+    }
+
+    @keyframes backdiv {
+        50% {
+            background: #ffe6f2;
+        }
+    }
+
+    @keyframes beat {
+        0% {
+            transform: scale(1) rotate(-45deg);
+        }
+
+        50% {
+            transform: scale(0.6) rotate(-45deg);
+        }
+    }
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+
+
+<!-- Twinkle Stars -->
+<style>
+    .stars {
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+    }
+
+    .star-1 {
+        margin-top: 15%;
+        margin-left: 60%;
+        animation-name: twinkle-1;
+        animation-duration: 1s;
+    }
+
+    .star-2 {
+        margin-top: 25%;
+        margin-left: 25%;
+        animation-name: twinkle-2;
+        animation-duration: 1s;
+    }
+
+    @keyframes twinkle-1 {
+        50% {
+            transform: scale(0.5);
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes twinkle-2 {
+        20% {
+            transform: scale(0.5);
+            opacity: 0.5;
+        }
+    }
+
+    #back {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+    }
+</style>
+
+<div id="back"></div>
+<div class="star-1 stars"></div>
+<div class="star-2 stars"></div>
+
+
+<!-- 
+Dropping circles -->
+
+<style>
+    .balls {
+        border-radius: 50%;
+        background: linear-gradient(35deg,
+            #ccffff,
+            #ffcccc);
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    #ball1 {
+        left: 27%;
+        animation-timing-function: linear;
+    }
+
+    #ball2 {
+        left: 56%;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+
+        100% {
+            top: 249px;
+        }
+    }
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
+
+
+<!-- Cubic-bezier -->
+
+<style>
+    .balls {
+        border-radius: 50%;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        margin-top: 50px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    #red {
+        background: red;
+        left: 27%;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    #blue {
+        background: blue;
+        left: 56%;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes bounce {
+        0% {
+            top: 0px;
+        }
+
+        100% {
+            top: 249px;
+        }
+    }
+</style>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+
+
+<!-- Balls synchronize -->
+
+<style>
+    .balls {
+        border-radius: 50%;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        top: 60%;
+        animation-name: jump;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    #red {
+        background: red;
+        left: 25%;
+        animation-timing-function: linear;
+    }
+
+    #blue {
+        background: blue;
+        left: 50%;
+        animation-timing-function: ease-out;
+    }
+
+    #green {
+        background: green;
+        left: 75%;
+        animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+    }
+
+    @keyframes jump {
+        50% {
+            top: 10%;
+        }
+    }
+</style>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+<div class="balls" id="green"></div>
+
+
+<!-- GRID -->
+
+<style>
+    .item1 {
+        background: LightSkyBlue;
+        grid-area: header;
+    }
+
+    .item2 {
+        background: LightSalmon;
+        grid-area: advert;
+    }
+
+    .item3 {
+        background: PaleTurquoise;
+        grid-area: content;
+    }
+
+    .item4 {
+        background: lightpink;
+        grid-area: footer;
+    }
+
+    .container {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+            "header"
+            "advert"
+            "content"
+            "footer";
+    }
+
+    @media (min-width: 300px) {
+        .container {
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "advert header"
+                "advert content"
+                "advert footer";
+        }
+    }
+
+    @media (min-width: 400px) {
+        .container {
+            /* change the code below this line */
+            grid-template-areas:
+                "header header"
+                "advert content"
+                "footer footer";
+
+            /* change the code above this line */
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="item1">header</div>
+    <div class="item2">advert</div>
+    <div class="item3">content</div>
+    <div class="item4">footer</div>
+</div>
