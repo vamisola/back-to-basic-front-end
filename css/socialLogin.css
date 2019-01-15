@@ -128,3 +128,23 @@ input[type=submit]:hover {
         text-align: center;
     }
 }
+
+.space {
+    padding: 2%;
+}
+
+/* grid social*/
+
+.grid-style-social {
+    display: grid;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #d2d2d2;
+    grid-template-columns: 1fr 1fr;
+}
+.box {
+    margin: 30px auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
